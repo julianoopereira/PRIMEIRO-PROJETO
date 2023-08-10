@@ -1,4 +1,9 @@
-﻿<table class="table">
+﻿@if (ViewData["MsgErro"] != null)
+<div class="alert-danger"> 
+    @ViewData["MsgErro"]
+    </div>
+
+<table class="table">
     <thead>
         <tr>
             <th scope="col">Nome</th>
@@ -13,6 +18,7 @@
             <td>Juliano</td>
             <td>8855</td>
             <td>885.479.883-97</td>
+            <td class="btn btn-outline-success me-2" style="background-color: #ECB038;" type="button">Pesquisar</td>
 
         </tr>
         <tr>
