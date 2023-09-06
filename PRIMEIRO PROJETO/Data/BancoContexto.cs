@@ -17,7 +17,7 @@ namespace PRIMEIRO_PROJETO.Data
         }
 
         public DbSet<Aluno> Aluno { get; set; }
-        public DbSet<Aluno> Login { get; set; }
+        public DbSet<Login> Login { get; set; }
 
     }
 }

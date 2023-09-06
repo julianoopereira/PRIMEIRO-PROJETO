@@ -1,23 +1,23 @@
-﻿
-@model List<Aluno>
-@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<Aluno>
+
 
 
 @if (TempData["MsgErro"] != null)
 {
-        <div class="alert-danger">
-        </div>
+    <div class="alert-danger">
+        @TempData["MsgErro"]
+    </div>
 }
+
+
 
 @if (TempData["MsgSucesso"] != null)
 {
-        <div class="alert-success">
+    <div class="alert-success">
         @TempData["MsgSucesso"]
-        </div>
+    </div>
 }
-
-<table class="table"
+<table class="table">
     <thead>
         <tr>
             <th scope="col">Nome</th>
@@ -25,40 +25,34 @@
         </tr>
     </thead>
     <tbody>
-       @if (Model != null && Model.Any())
-       {
-             foreach (Aluno aluno in Model)
+        @if (Model != null && Model.Any())
+        {
+            foreach (Aluno aluno in Model)
             {
-                    
                 <tr>
-                   <td> "@aluno.Nome</td>
-                   <td> @aluno.Cep</td>
+                    <td> @aluno.Nome</td>
+                    <td> @aluno.Cep</td>
 
-                   <td>
-                        <div class="d-grid gap-2 d-md-block"
-                            <a type="submit" class="btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
-                            <a type="submit" class="btn-primary" role="button" asp-controller="Aluno" asp-action="Editar" asp-route-id="@aluno.Id>Editar</a>
-                            <a type="submit" class="btn-primary" role="button" asp-controller="Aluno" asp-action="Excluir" asp-route-id="@aluno.Id>Excluir</a>
 
-                        </div>               
-                       
-                   </td>                         
 
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
+                            <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="Editar" asp-route-id="@aluno.Id">Editar</a>
+                            <a type="submit" class="btn btn-primary" role="button" asp-controller="Aluno" asp-action="ExcluirAluno" asp-route-id="@aluno.Id">Excluir</a>
+                        </div>
+                    </td>
                 </tr>
-              }
-       
-       
-       }
-           
-               
-                
-              
+
+
+
+            }
+        }
     </tbody>
 </table>
 
-   <div> class="tes-center">
-    <h1 class="display-4"> Bem Vinindo</h1>
-    
-    </div>
 
-<br />
+
+<div class="text-center">
+    <a class="btn btn-primary" type="button" asp-controller="Aluno" asp-action="Adicionar">Adicionar Aluno</a>
+</div>
