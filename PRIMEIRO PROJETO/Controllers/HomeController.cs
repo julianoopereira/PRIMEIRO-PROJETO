@@ -18,16 +18,6 @@ namespace PRIMEIRO_PROJETO.Controllers
             return View();
         }
 
-        public IActionResult Aluno()
-        {
-            return View();
-        }
-        public IActionResult Professor()
-        {
-            return View();
-        }
-
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

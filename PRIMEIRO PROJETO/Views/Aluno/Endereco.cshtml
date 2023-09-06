@@ -1,14 +1,15 @@
 ﻿@model Endereco
 
+
+
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
                 <p>Logradouro: @Html.DisplayFor(endereco => endereco.logradouro)</p>
-                <p>Localidade: @Html.DisplayFor(endereco => endereco.localidade</p>
-                 p>Bairro: @Html.DisplayFor(endereco => endereco.bairro)</p>
+                <p>Bairro: @Html.DisplayFor(endereco => endereco.bairro)</p>
+                <p>Localidade: @Html.DisplayFor(endereco => endereco.localidade)</p>
                 <p>UF: @Html.DisplayFor(endereco => endereco.uf)</p>
-                <p>DDD: @Html.DisplayFor(endereco => endereco.ddd)</p>
             </div>
             <div class="modal-footer">
                 <a class="btn btn-primary" type="button" asp-controller="Aluno" asp-action="Index">Fechar</a>
@@ -16,6 +17,7 @@
         </div>
     </div>
 </div>
+
 
 
 

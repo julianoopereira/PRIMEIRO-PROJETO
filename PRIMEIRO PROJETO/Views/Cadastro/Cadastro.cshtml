@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Cadastrar Aluno";
+}
+<style>
+    body {
+        color: #f0f0f0;
+    }
+
+    .tituloCadastro {
+        padding-top: 30px;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .btn-primary {
+        width: 15%;
+    }
+</style>
+<h1 class="tituloCadastro">Cadastrar Aluno</h1>
+<br />
+<br />
+<form>
+    <!-- ... seus campos de formulário ... -->
+
+    <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nome completo</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome completo">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="E-mail@exemplo.com">
+    </div>
+    <div class="row g-3">
+        <div class="col-md-4">
+            <label for="validationDefault01" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="validationDefault01">
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault02" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="validationDefault02">
+        </div>
+    </div>
+    <label for="basic-url" class="form-label">Informe seu LinkedIn:</label>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon3">https://linkedin.com/</span>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Senha">
+    </div>
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Confirmar Senha</label>
+        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Confirmar senha">
+    </div>
+    <br />
+    <input type="checkbox" id="checkboxCadastro" name="checkboxCadastro" required />
+    <label for="chkAceitoTermos">Eu Aceito os termos e condições</label>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-dark" asp-controller="Conhecimento" asp-action="Conhecimento">Cadastrar!</button>
+</form>

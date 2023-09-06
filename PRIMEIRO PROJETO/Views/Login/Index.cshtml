@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "_LayoutDeslogado";
+}
+@if (ViewData["MsgErro"] != null)
+{
+    <div class="alert-danger">
+        @ViewData["MsgErro"]
+    </div>
+}
+
+@model Login
+
+<form class="row g-3" asp-controller="Login" asp-action="BuscaLogin">
+    <div class="col-md-6>
+    <label for="inputEmail4" class="form-label">Usuário</label>
+    <input type="email" class="form-control" id="inputEmail4" asp-for="Email">
+    <label for="inputPassword4" class="form-label">Senha</label>
+    <input type="password" class="form-control" id="inputPassword4" asp-for="Senha">
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary col-1" role="button" Entrar</button>
+    </div>
+     
+ </form>

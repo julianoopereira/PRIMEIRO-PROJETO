@@ -1,5 +1,59 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Aluno
+
+<figure class="text-center">
+    <h1 style=" font-size: 35px; color: #ECB038;"> <strong>Seja Bem-Vindo !</strong></h1>
+    <h2 style=" color: #ECB038;"> <strong>Faça seu Cadastro</strong></h2>
+</figure>
+<body style=" background-color: #6193A1;margin: auto;">
+</body>
+
+
+<form style=" font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: bold; font-size: 16px;" asp-controller="Aluno" asp-action="InserirAluno" method="post">
+
+    <div class="mb-3">
+        <label class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Curso</label>
+        <input type="text" asp-for="Curso" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">CEP</label>
+        <input type="text" asp-for="Cep" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Data de Nascimento</label>
+        <input type="text" asp-for="DataNascimento" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Matricula</label>
+        <input type="text" asp-for="Matricula" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Endereço</label>
+        <input type="text" asp-for="Endereco" class="form-control">
+    </div>
+
+    </div class="text-center">
+          <button class="btn btn-primary" type="submit">Adicionar</button>
+    </div>
+
+    @*<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
+    </div>*@
+    @*<div class="mb-3">
+    <label for="exampleInputPassword1" asp-for="Senha" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>*@
+
+    <br />
+
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <button class="btn btn-primary me-md-2" style="font-size:20px; background-color: #ECB038;" type="submit">Adicionar</button>
+        <a class="btn btn-primary" style=" font-size:20px; background-color: #ECB038;" type="button" asp-controller="Aluno" asp-action="Aluno">Fechar</a>
+    </div>
+
+</form>

@@ -1,38 +1,64 @@
-﻿@if (ViewData["MsgErro"] != null)
-<div class="alert-danger"> 
-    @ViewData["MsgErro"]
-    </div>
+﻿
+@model List<Aluno>
+@{
+    ViewData["Title"] = "Home Page";
 
-<table class="table">
+
+@if (TempData["MsgErro"] != null)
+{
+        <div class="alert-danger">
+        </div>
+}
+
+@if (TempData["MsgSucesso"] != null)
+{
+        <div class="alert-success">
+        @TempData["MsgSucesso"]
+        </div>
+}
+
+<table class="table"
     <thead>
         <tr>
             <th scope="col">Nome</th>
-            <th scope="col">Idade</th>
-            <th scope="col">Matricula</th>
-            <th scope="col">CPF</th>
+            <th scope="col">Cep</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Juliano</td>
-            <td>8855</td>
-            <td>885.479.883-97</td>
-            <td class="btn btn-outline-success me-2" style="background-color: #ECB038;" type="button">Pesquisar</td>
+       @if (Model != null && Model.Any())
+       {
+             foreach (Aluno aluno in Model)
+            {
+                    
+                <tr>
+                   <td> "@aluno.Nome</td>
+                   <td> @aluno.Cep</td>
 
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Pedro Manco</td>
-            <td>7788</td>
-            <td>047.379.853-97</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Mévio</td>
-            <td>2324</td>
-            <td>005.998.798-92</td>
+                   <td>
+                        <div class="d-grid gap-2 d-md-block"
+                            <a type="submit" class="btn-primary" role="button" asp-controller="Aluno" asp-action="BuscarEndereco" asp-route-cep="@aluno.Cep">Endereco</a>
+                            <a type="submit" class="btn-primary" role="button" asp-controller="Aluno" asp-action="Editar" asp-route-id="@aluno.Id>Editar</a>
+                            <a type="submit" class="btn-primary" role="button" asp-controller="Aluno" asp-action="Excluir" asp-route-id="@aluno.Id>Excluir</a>
 
-        </tr>
+                        </div>               
+                       
+                   </td>                         
+
+                </tr>
+              }
+       
+       
+       }
+           
+               
+                
+              
     </tbody>
 </table>
+
+   <div> class="tes-center">
+    <h1 class="display-4"> Bem Vinindo</h1>
+    
+    </div>
+
+<br />

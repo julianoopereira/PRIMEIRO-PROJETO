@@ -1,0 +1,24 @@
+﻿@model Aluno
+
+<figure class="text-center">
+    <h1 style=" font-size: 35px; color: #ECB038;"> <strong>Editar Cadastro</strong></h1>
+
+</figure>
+<body style=" background-color: #6193A1;margin: auto;">
+</body>
+
+
+<form asp-controller="Aluno" asp-action="EditarAluno">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label for="text" asp-for="Nome" class="form-control col-md-4"></label>
+    </div>
+   
+    <br />
+
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <button class="btn btn-primary me-md-2" style="font-size:20px; background-color: #ECB038;" type="submit">Salvar</button>
+        
+    </div>
+
+</form>

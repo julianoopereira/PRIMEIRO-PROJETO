@@ -2,14 +2,11 @@
 
 namespace PRIMEIRO_PROJETO.Controllers
 {
-    public class ProfessorController : Controller
+    public class CadastroController : Controller
     {
         public IActionResult Index()
         {
-            return View("Professor");
+            return View("Cadastro");
         }
     }
 }
-
-
-//// PAREI EM DATA PROFESOR
