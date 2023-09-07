@@ -18,7 +18,7 @@ namespace PRIMEIRO_PROJETO.Controllers
             _alunoRepositorio = alunoRepositorio;
         }
 
-        public IActionResult Aluno()
+        public IActionResult Index()
         {
             ///lista de alunos
             var aluno = _alunoRepositorio.BuscarAlunos();
@@ -87,11 +87,11 @@ namespace PRIMEIRO_PROJETO.Controllers
             return RedirectToAction("Index");
         }
 
-        //public IActionResult ExcluirAluno(Aluno aluno);
-        //{
-        //   _alunoRepositorio.ExcluirAluno(aluno);
-        //    retur RedirectToAction("Index");
-        // }
+        public IActionResult ExcluirAluno(Aluno aluno)
+        {
+            _alunoRepositorio.ExcluirAluno(aluno);
+            return RedirectToAction("Index");
+        }
 
         public IActionResult ExcluirConfirmacao(int Id)
         {
@@ -121,4 +121,3 @@ namespace PRIMEIRO_PROJETO.Controllers
     }
 }
 
-  

@@ -15,7 +15,7 @@ namespace PRIMEIRO_PROJETO.Controllers
 
         public IActionResult Index()
         {
-            return View("Login");
+            return View("Index");
         }
         public IActionResult BuscaLogin(Login login)
         {
